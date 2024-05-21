@@ -17,7 +17,7 @@
 
 @implementation ViewController
 
-#pragma mark - UIViewController
+#pragma mark - NSViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
