@@ -1,0 +1,6 @@
+framework module Pods_MacChessboard {
+  umbrella header "Pods-MacChessboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

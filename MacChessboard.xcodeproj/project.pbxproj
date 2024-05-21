@@ -12,6 +12,7 @@
 		24579BD42BFCD08300412992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24579BD32BFCD08300412992 /* Assets.xcassets */; };
 		24579BD72BFCD08300412992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24579BD52BFCD08300412992 /* Main.storyboard */; };
 		24579BDA2BFCD08300412992 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24579BD92BFCD08300412992 /* main.m */; };
+		CE80DCAA9EFD8246419B0E60 /* Pods_MacChessboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A49AD5116B72483B04C108 /* Pods_MacChessboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,9 @@
 		24579BD82BFCD08300412992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24579BD92BFCD08300412992 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24579BDB2BFCD08300412992 /* MacChessboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacChessboard.entitlements; sourceTree = "<group>"; };
+		60A49AD5116B72483B04C108 /* Pods_MacChessboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacChessboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB5B9FDB16AF3A4BBE75D1FE /* Pods-MacChessboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacChessboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacChessboard/Pods-MacChessboard.debug.xcconfig"; sourceTree = "<group>"; };
+		D7B6AA60FF6233BB453CE6DC /* Pods-MacChessboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacChessboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacChessboard/Pods-MacChessboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE80DCAA9EFD8246419B0E60 /* Pods_MacChessboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				24579BCC2BFCD08100412992 /* MacChessboard */,
 				24579BCB2BFCD08100412992 /* Products */,
+				E73D94454E47774F1F1F23D9 /* Pods */,
+				C25CB93A97C79AC764306DE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = MacChessboard;
 			sourceTree = "<group>";
 		};
+		C25CB93A97C79AC764306DE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60A49AD5116B72483B04C108 /* Pods_MacChessboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E73D94454E47774F1F1F23D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB5B9FDB16AF3A4BBE75D1FE /* Pods-MacChessboard.debug.xcconfig */,
+				D7B6AA60FF6233BB453CE6DC /* Pods-MacChessboard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24579BDE2BFCD08300412992 /* Build configuration list for PBXNativeTarget "MacChessboard" */;
 			buildPhases = (
+				E9EC2A1ADB9F7C2CC315ADEB /* [CP] Check Pods Manifest.lock */,
 				24579BC62BFCD08100412992 /* Sources */,
 				24579BC72BFCD08100412992 /* Frameworks */,
 				24579BC82BFCD08100412992 /* Resources */,
+				6498CCC10AFCCD64E511ED25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6498CCC10AFCCD64E511ED25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MacChessboard/Pods-MacChessboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacChessboard/Pods-MacChessboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9EC2A1ADB9F7C2CC315ADEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacChessboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24579BC62BFCD08100412992 /* Sources */ = {
@@ -270,6 +335,7 @@
 		};
 		24579BDF2BFCD08300412992 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB5B9FDB16AF3A4BBE75D1FE /* Pods-MacChessboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MacChessboard/MacChessboard.entitlements;
@@ -287,6 +353,7 @@
 		};
 		24579BE02BFCD08300412992 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B6AA60FF6233BB453CE6DC /* Pods-MacChessboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MacChessboard/MacChessboard.entitlements;
