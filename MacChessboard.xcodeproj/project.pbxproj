@@ -12,6 +12,9 @@
 		24579BD42BFCD08300412992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24579BD32BFCD08300412992 /* Assets.xcassets */; };
 		24579BD72BFCD08300412992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24579BD52BFCD08300412992 /* Main.storyboard */; };
 		24579BDA2BFCD08300412992 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24579BD92BFCD08300412992 /* main.m */; };
+		24579BE72BFCD6F500412992 /* CheckeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24579BE22BFCD6F400412992 /* CheckeredView.m */; };
+		24579BE82BFCD6F500412992 /* NetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 24579BE42BFCD6F500412992 /* NetworkClient.m */; };
+		24579BE92BFCD6F500412992 /* CheckeredBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24579BE62BFCD6F500412992 /* CheckeredBoardView.m */; };
 		CE80DCAA9EFD8246419B0E60 /* Pods_MacChessboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A49AD5116B72483B04C108 /* Pods_MacChessboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,12 @@
 		24579BD82BFCD08300412992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24579BD92BFCD08300412992 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24579BDB2BFCD08300412992 /* MacChessboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacChessboard.entitlements; sourceTree = "<group>"; };
+		24579BE12BFCD6F400412992 /* NetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkClient.h; sourceTree = "<group>"; };
+		24579BE22BFCD6F400412992 /* CheckeredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckeredView.m; sourceTree = "<group>"; };
+		24579BE32BFCD6F400412992 /* CheckeredBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckeredBoardView.h; sourceTree = "<group>"; };
+		24579BE42BFCD6F500412992 /* NetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkClient.m; sourceTree = "<group>"; };
+		24579BE52BFCD6F500412992 /* CheckeredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckeredView.h; sourceTree = "<group>"; };
+		24579BE62BFCD6F500412992 /* CheckeredBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckeredBoardView.m; sourceTree = "<group>"; };
 		60A49AD5116B72483B04C108 /* Pods_MacChessboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacChessboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5B9FDB16AF3A4BBE75D1FE /* Pods-MacChessboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacChessboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacChessboard/Pods-MacChessboard.debug.xcconfig"; sourceTree = "<group>"; };
 		D7B6AA60FF6233BB453CE6DC /* Pods-MacChessboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacChessboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacChessboard/Pods-MacChessboard.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +73,12 @@
 		24579BCC2BFCD08100412992 /* MacChessboard */ = {
 			isa = PBXGroup;
 			children = (
+				24579BE32BFCD6F400412992 /* CheckeredBoardView.h */,
+				24579BE62BFCD6F500412992 /* CheckeredBoardView.m */,
+				24579BE52BFCD6F500412992 /* CheckeredView.h */,
+				24579BE22BFCD6F400412992 /* CheckeredView.m */,
+				24579BE12BFCD6F400412992 /* NetworkClient.h */,
+				24579BE42BFCD6F500412992 /* NetworkClient.m */,
 				24579BCD2BFCD08100412992 /* AppDelegate.h */,
 				24579BCE2BFCD08100412992 /* AppDelegate.m */,
 				24579BD02BFCD08100412992 /* ViewController.h */,
@@ -204,9 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24579BE82BFCD6F500412992 /* NetworkClient.m in Sources */,
 				24579BD22BFCD08100412992 /* ViewController.m in Sources */,
+				24579BE92BFCD6F500412992 /* CheckeredBoardView.m in Sources */,
 				24579BDA2BFCD08300412992 /* main.m in Sources */,
 				24579BCF2BFCD08100412992 /* AppDelegate.m in Sources */,
+				24579BE72BFCD6F500412992 /* CheckeredView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,21 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "CheckeredBoardView.h"
+
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet CheckeredBoardView *checkeredBoardView;
+
+@end
 
 @implementation ViewController
 
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
 }
-
-
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
-}
-
 
 @end
