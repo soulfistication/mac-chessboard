@@ -13,6 +13,8 @@
 #define NUM_COLUMNS 16
 #define TIME_INTERVAL 1.0
 #define NUM_STIMS 180
+#define IP_ADDRESS_1 @"192.168.1.196"
+#define IP_ADDRESS_2 @"192.168.1.199"
 
 @interface CheckeredBoardView ()
 
@@ -83,8 +85,8 @@
         x = 0;
     }
 
-    self.client1 = [[NetworkClient alloc] initWithIPAddress:@"192.168.1.196"];
-    self.client2 = [[NetworkClient alloc] initWithIPAddress:@"192.168.1.199"];
+    self.client1 = [[NetworkClient alloc] initWithIPAddress:IP_ADDRESS_1];
+    self.client2 = [[NetworkClient alloc] initWithIPAddress:IP_ADDRESS_2];
 
     self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERVAL
                                                  repeats:YES
