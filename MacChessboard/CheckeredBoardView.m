@@ -104,14 +104,14 @@
 }
 
 - (void)toggleCheckeredView {
-    //NSLog(@"%@", @"Toggle Color");
+    NSLog(@"%@", @"Toggle Color");
     for (CheckeredView * checkeredView in self.checkeredSubViews) {
         [checkeredView toggleColor];
     }
 }
 
 - (void)sendSocket {
-    // [self.client send];
+    [self.client send];
 }
 
 - (void)turnOffDisplay {

@@ -47,8 +47,6 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
     NSLog(@"%@", @"Did connect to Host");
-    //NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    //formatter.timeZone = [NSTimeZone timeZoneWithName:@"America/Mexico_City"];;
     NSDate *date = [NSDate now];
     NSString *timeStamp = [date description];
     [timeStamp stringByAppendingString:@" "];
@@ -75,8 +73,10 @@
 }
 
 - (void)send {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"America/Mexico_City"];
     NSDate *date = [NSDate now];
-    NSString *timeStamp = [date description];
+    NSString *timeStamp = [formatter stringFromDate:date];
     NSLog(@"Send event - %@", timeStamp);
     NSMutableData *timeStampData = [[timeStamp dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
     [timeStampData appendData:[GCDAsyncSocket CRLFData]];
@@ -84,7 +84,7 @@
 }
 
 - (void)disconnect {
-    //[self.tcpSocket disconnect];
+    [self.tcpSocket disconnect];
 }
 
 @end
