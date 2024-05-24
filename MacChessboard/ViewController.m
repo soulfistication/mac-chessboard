@@ -21,6 +21,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //[self setupObserver];
+}
+
+- (void)setupObserver {
+    [NSNotificationCenter.defaultCenter addObserverForName:NSWindowDidEnterFullScreenNotification
+                                                    object:nil
+                                                     queue:[NSOperationQueue mainQueue]
+                                                usingBlock:^(NSNotification * _Nonnull note) {
+        [self updateView];
+    }];
+}
+
+- (void)updateView {
+    NSLog(@"%@", @"Changed to Fullscreen: Trigger Redraw of NSView");
+    [self.checkeredBoardView redraw];
 }
 
 @end

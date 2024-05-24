@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CheckeredBoardView : NSView
 
+- (void)redraw;
+
 @end
 
 NS_ASSUME_NONNULL_END

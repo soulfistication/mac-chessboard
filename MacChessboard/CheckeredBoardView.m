@@ -38,11 +38,32 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [self buildViewHierarchy];
+}
 
+- (void)redraw {
+    [self destroyViewHierarchy];
+    [self buildViewHierarchy];
+}
+
+- (void)destroyViewHierarchy {
+    for (NSView *checkeredView in self.checkeredSubViews) {
+        [checkeredView removeFromSuperviewWithoutNeedingDisplay];
+    }
+    [self.checkeredSubViews removeAllObjects];
+    [self.timer invalidate];
+    self.timer = nil;
+    self.client1 = nil;
+    self.client2 = nil;
+}
+
+- (void)buildViewHierarchy {
     _numStims = NUM_STIMS;
-
-    CGFloat width = self.frame.size.width / NUM_COLUMNS;
-    CGFloat height = self.frame.size.height / NUM_ROWS;
+    
+    NSScreen *screen = [NSScreen mainScreen];
+    
+    CGFloat width = screen.frame.size.width / NUM_COLUMNS;
+    CGFloat height = screen.frame.size.height / NUM_ROWS;
 
     CGFloat x = 0;
     CGFloat y = 0;
@@ -65,7 +86,7 @@
     self.client1 = [[NetworkClient alloc] initWithIPAddress:@"192.168.1.196"];
     self.client2 = [[NetworkClient alloc] initWithIPAddress:@"192.168.1.199"];
 
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERVAL 
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERVAL
                                                  repeats:YES
                                                    block:^(NSTimer * _Nonnull timer) {
 
@@ -78,7 +99,6 @@
 
         self.numStims--;
     }];
-
 }
 
 - (void)toggleCheckeredView {
